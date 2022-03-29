@@ -34,5 +34,10 @@ public class ItemService {
         entityManager.remove(foundItem);
     }
 
+    public Item updateItemName(Long id, String name) {
+        Item foundItem = entityManager.find(Item.class, id);
+        foundItem.setName(name);
+        return foundItem;
+    }
 
 }
